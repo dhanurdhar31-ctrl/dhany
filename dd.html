@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume — Your Name</title>
+  <meta name="description" content="Personal resume / CV website" />
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --accent:#06b6d4;
+      --muted:#9aa6b2;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --maxw:900px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071026 0%, #081427 60%);color:#e6eef3}
+    .wrap{max-width:var(--maxw);margin:40px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:20px;box-shadow:0 10px 30px rgba(2,6,23,0.6);display:grid;grid-template-columns:1fr 320px;gap:28px}
+    header{display:flex;align-items:center;gap:18px}
+    .avatar{width:88px;height:88px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:#022;box-shadow:0 6px 18px rgba(6,182,212,0.12)}
+    h1{margin:0;font-size:26px}
+    h2{margin:0;font-size:16px;color:var(--muted)}
+    .headline{display:flex;flex-direction:column}
+    .tagline{margin-top:6px;color:var(--muted);font-size:14px}
+
+    /* Left column content */
+    .main{padding:18px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border-radius:12px}
+    section{margin-bottom:18px}
+    .section-title{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+    .section-title h3{margin:0;font-size:15px}
+    .pill{padding:6px 10px;border-radius:999px;background:var(--glass);color:var(--muted);font-size:13px}
+    .experience-item{margin-bottom:12px}
+    .role{font-weight:600}
+    .meta{font-size:13px;color:var(--muted)}
+    ul{margin:8px 0 0 18px}
+
+    /* Right column */
+    .side{padding:18px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border-radius:12px;height:100%;display:flex;flex-direction:column;gap:12px}
+    .contact{display:flex;flex-direction:column;gap:6px;font-size:14px}
+    .skill-list{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:8px;font-size:13px;color:var(--muted)}
+    .progress{height:8px;background:rgba(255,255,255,0.04);border-radius:6px;overflow:hidden}
+    .progress > span{display:block;height:100%}
+    .download-btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#021;cursor:pointer;text-decoration:none;font-weight:600}
+
+    /* small screens */
+    @media (max-width:880px){
+      .wrap{grid-template-columns:1fr;padding:18px;margin:18px}
+      .side{order:2}
+    }
+
+    /* print-friendly */
+    @media print{
+      body{background:white;color:black}
+      .wrap{box-shadow:none;background:transparent}
+      .avatar{background:#ddd;color:#111}
+      .download-btn, .pill{display:none}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="main">
+      <header>
+        <div class="avatar">YN</div>
+        <div class="headline">
+          <h1>Your Name</h1>
+          <h2>Frontend Developer • UI/UX enthusiast</h2>
+          <div class="tagline">I build accessible, high-performance web experiences. Available for full-time and freelance work.</div>
+        </div>
+      </header>
+
+      <section>
+        <div class="section-title"><h3>Summary</h3><div class="pill">5+ years experience</div></div>
+        <p style="margin:0;color:var(--muted);line-height:1.55">Product-minded front-end developer skilled in HTML, CSS, JavaScript and modern frameworks. I enjoy turning complex problems into simple, beautiful and intuitive user experiences. Strong collaboration with designers and backend engineers.</p>
+      </section>
+
+      <section>
+        <div class="section-title"><h3>Experience</h3></div>
+
+        <div class="experience-item">
+          <div class="role">Senior Frontend Engineer — Acme Corp</div>
+          <div class="meta">June 2021 — Present · Remote</div>
+          <ul>
+            <li>Led team to rebuild core product UI using React and TypeScript, improving performance and accessibility.</li>
+            <li>Implemented component library and design tokens to reduce UI inconsistencies and speed development.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="role">Frontend Developer — Bright Studio</div>
+          <div class="meta">Jan 2019 — May 2021 · Bangalore, India</div>
+          <ul>
+            <li>Built responsive marketing sites and interactive dashboards consumed by 100k+ monthly users.</li>
+            <li>Collaborated with product/design to ship A/B tests and iterate on user flows.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title"><h3>Projects</h3></div>
+        <div class="experience-item">
+          <div class="role">Open-source Component Library</div>
+          <div class="meta">React · TypeScript · Storybook</div>
+          <p class="meta" style="margin:6px 0 0">Built a reusable set of components used across internal products. Focus on accessibility and documentation.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title"><h3>Education</h3></div>
+        <div class="experience-item">
+          <div class="role">B.Tech, Computer Science — Example University</div>
+          <div class="meta">2014 — 2018</div>
+        </div>
+      </section>
+
+    </div>
+
+    <aside class="side">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div style="font-weight:700">Contact</div>
+          <div class="contact">
+            <div>Email: <a href="mailto:you@example.com" style="color:var(--accent);text-decoration:none">you@example.com</a></div>
+            <div>Phone: +91 98765 43210</div>
+            <div>Location: Bangalore, India</div>
+          </div>
+        </div>
+        <div>
+          <a class="download-btn" href="#" onclick="window.print();return false">Print / Save PDF</a>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-weight:700;margin-bottom:8px">Skills</div>
+        <div class="skill-list">
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">React</div>
+          <div class="skill">TypeScript</div>
+          <div class="skill">Accessibility</div>
+          <div class="skill">Performance</div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-weight:700;margin-bottom:8px">Languages</div>
+        <div class="skill-list">
+          <div class="skill">English — Professional</div>
+          <div class="skill">Hindi — Native</div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-weight:700;margin-bottom:8px">Tools</div>
+        <div class="skill-list">
+          <div class="skill">Git</div>
+          <div class="skill">VS Code</div>
+          <div class="skill">Figma</div>
+          <div class="skill">Jest</div>
+        </div>
+      </div>
+
+      <div style="margin-top:auto;font-size:13px;color:var(--muted)">Last updated: Oct 24, 2025</div>
+    </aside>
+
+  </div>
+
+  <!-- Optional small script to swap initials from name field -->
+  <script>
+    (function(){
+      try{
+        var name = document.querySelector('h1').innerText.trim();
+        var parts = name.split(' ');
+        var initials = parts.length ? parts.map(p=>p[0].toUpperCase()).slice(0,2).join('') : 'YN';
+        var avatar = document.querySelector('.avatar');
+        if(avatar) avatar.textContent = initials;
+      }catch(e){console.warn(e)}
+    })();
+  </script>
+</body>
+</html>
